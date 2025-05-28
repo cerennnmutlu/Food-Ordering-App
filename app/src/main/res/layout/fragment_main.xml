@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mainFragment"
+            type="com.cerennnmutlu.yemekler.ui.fragment.MainFragment" />
+        <variable
+            name="viewModel"
+            type="com.cerennnmutlu.yemekler.ui.viewmodel.MainFragmentViewModel" />
+        <variable
+            name="adapter"
+            type="com.cerennnmutlu.yemekler.ui.adapter.MealsAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        tools:context=".ui.fragment.MainFragment">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:background="?attr/colorSurface"
+            android:theme="@style/SearchViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="283dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lobster_two"
+            android:text="Söyle Gelsin"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorLink="?attr/colorOnBackground"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginBottom="72dp"
+            android:adapter="@{adapter}"
+            android:background="?android:attr/colorBackground"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent"
+            app:spanCount="2">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Yemekler" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorPrimaryVariant">@color/very_dark_gray</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/light_accent</item>
+        <item name="colorSecondaryVariant">@color/light_accent</item>
+        <item name="colorOnSecondary">@color/very_dark_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorSurface">@color/light_background</item>
+        <item name="colorOnBackground">@color/very_dark_gray</item>
+        <item name="colorOnSurface">@color/very_dark_gray</item>
+        <item name="colorOnSurfaceVariant">@color/gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.BitirmeProjesi" parent="Theme.Yemekler" />
+
+    <style name="SearchViewStyle">
+        <item name="android:background">@color/light_background</item>
+        <item name="android:textColor">@color/very_dark_gray</item>
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+</resources>
